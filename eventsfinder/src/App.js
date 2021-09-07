@@ -1,13 +1,58 @@
-import './App.css';
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
+import axios from "axios";
 
-function App() {
+import EventList from "./Components/EventList/EventList";
+import Event from "./Components/Event/Event";
+import "./App.css";
 
-render() 
+const rootUrl =
+  "https://app.ticketmaster.com/discovery/v2/events.json";
 
-  return (
-    <div>
-    </div>
-  );
+const apiKey = "&apikey=Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
+const postalCode = "?postalCode=61265";
+const keyword = "&keyword=";
+const radius = "&radius=50&unit=miles"
+const testUrl =  rootUrl + postalCode + radius + keyword + apiKey;
+// console.log(testUrl);
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: {},
+    };
+  }
+
+  async fetchEventInfo() {
+    let results = await axios.get(testUrl);
+    this.setState({ data: results.data._embedded.events });
+  }
+
+  async componentDidMount() {
+    await this.fetchEventInfo();
+  }
+
+  render() {
+    return (
+      <div>
+        <nav>
+          <Link to="/">
+            <h1>Find Events</h1>
+          </Link>
+        </nav>
+        <Route
+          exact
+          path="/"
+          render={() => <EventList data={this.state.data} />}
+        />
+        <Route
+          path="/event/:id"
+          render={(props) => <Event {...props} data={this.state.data} />}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
