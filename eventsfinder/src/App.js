@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
+import Header from "./Components/Header/header";
 
 import EventList from "./Components/EventList/EventList";
 import Event from "./Components/Event/Event";
@@ -36,11 +37,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to="/">
-            <h1>Find Events</h1>
-          </Link>
-        </nav>
+    
+        
+        <Header />
+        
+        <div className="background">
+          
         <Route
           exact
           path="/"
@@ -50,6 +52,7 @@ class App extends Component {
           path="/event/:id"
           render={(props) => <Event {...props} data={this.state.data} />}
         />
+        </div>
       </div>
     );
   }
