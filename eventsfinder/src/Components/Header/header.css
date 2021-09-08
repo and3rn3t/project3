@@ -1,0 +1,15 @@
+.header{
+background-color: rgb(204, 71, 18);
+font-family:cursive;
+font-size: 35px;
+text-align:center;
+vertical-align: middle;
+color:black;
+height: 200px;
+border-radius: 50px;
+border-color: black;
+border-style:solid;
+margin-left: 10px;
+margin-right:10px;
+
+}
