@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
+import Header from "./Components/Header/header";
 
 import EventList from "./Components/EventList/EventList";
 import Event from "./Components/Event/Event";
@@ -35,8 +36,15 @@ class App extends Component {
   render() {
     return (
       <div>
-            <h3>AMT Awesome Events Finder</h3>
-            <p>Check dev console, React Components (under EventList) for props from API</p>
+
+    
+        
+        <Header />
+        
+        <div className="background">
+         
+         
+         
         <Route
           exact
           path="/"
@@ -46,6 +54,7 @@ class App extends Component {
           path="/event/:id"
           render={(props) => <Event {...props} data={this.state.data} />}
         />
+        </div>
       </div>
     );
   }
