@@ -35,8 +35,11 @@ class App extends Component {
   render() {
     return (
       <div>
-            <h3>AMT Awesome Events Finder</h3>
-            <p>Check dev console, React Components (under EventList) for props from API</p>
+        <h3>AMT Awesome Events Finder</h3>
+        <p>
+          Check dev console, React Components (under EventList) for props from
+          API
+        </p>
         <Route
           exact
           path="/"
