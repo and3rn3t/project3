@@ -20,7 +20,8 @@ class EventList extends Component {
     )
     console.log(eventsArray)
     return (
-        <div>
+        
+            
             {eventsArray}
         </div>
     )
