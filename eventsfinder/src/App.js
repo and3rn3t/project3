@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import axios from "axios";
 
 import EventList from "./Components/EventList/EventList";
 import Event from "./Components/Event/Event";
 import "./App.css";
 
-const rootUrl =
-  "https://app.ticketmaster.com/discovery/v2/events.json";
+const rootUrl = "https://app.ticketmaster.com/discovery/v2/events.json";
 
 const apiKey = "&apikey=Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
 const postalCode = "?postalCode=61265";
 const keyword = "&keyword=";
-const radius = "&radius=50&unit=miles"
-const testUrl =  rootUrl + postalCode + radius + keyword + apiKey;
-// console.log(testUrl);
+const radius = "&radius=50&unit=miles";
+const apiUrl = rootUrl + postalCode + radius + keyword + apiKey;
+// console.log(apiUrl);
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +24,7 @@ class App extends Component {
   }
 
   async fetchEventInfo() {
-    let results = await axios.get(testUrl);
+    let results = await axios.get(apiUrl);
     this.setState({ data: results.data._embedded.events });
   }
 
@@ -36,11 +35,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav>
-          <Link to="/">
-            <h1>Find Events</h1>
-          </Link>
-        </nav>
+            <h3>AMT Awesome Events Finder</h3>
+            <p>Check dev console, React Components (under EventList) for props from API</p>
         <Route
           exact
           path="/"
