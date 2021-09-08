@@ -21,7 +21,7 @@ class EventList extends Component {
     console.log(eventsArray)
     return (
         <div>
-            <h2>Event List Component</h2>
+            <h2>Events List!</h2>
             {eventsArray}
         </div>
     )
