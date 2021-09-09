@@ -27,13 +27,9 @@ class EventList extends Component {
       }
       )
       return (
-
-      
-        <div>
-          <h2>Event List Component</h2>
+        <div>     
           {eventsArray}
         </div>
-      
       )
 
     }
