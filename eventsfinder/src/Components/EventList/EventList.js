@@ -37,6 +37,7 @@ class EventList extends Component {
         <div>
           <h2>Event List Component</h2>
         
+
         </div>
       )
 

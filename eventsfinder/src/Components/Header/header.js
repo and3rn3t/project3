@@ -4,12 +4,16 @@ import './header.css';
 
 export default class Header extends Component {
     render() {
-      return (
+      return (          
+              
+        
         <div className="header">
           <h1>Your Fun Fabulous Events Finder</h1>
-          
+         
+          <span class ='gradient'></span>
+              <span class='spotlight'></span>
         </div>
-      );
+      )
     }
   }
   

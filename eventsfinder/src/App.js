@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import axios from "axios";
 import Header from "./Components/Header/header";
 
@@ -14,7 +14,6 @@ const postalCode = "?postalCode=61265";
 const keyword = "&keyword=";
 const radius = "&radius=50&unit=miles";
 const apiUrl = rootUrl + postalCode + radius + keyword + apiKey;
-// console.log(apiUrl);
 
 class App extends Component {
   constructor(props) {
@@ -38,15 +37,22 @@ class App extends Component {
       <div>
         <Header />
         <div className="background">
-        <Route
-          exact
-          path="/"
-          render={() => <EventList data={this.state.data} />}
-        />
-        <Route
-          path="/event/:id"
-          render={(props) => <Event {...props} data={this.state.data} />}
-        />
+          <Link to="/event/0">Link to Event 0</Link>
+          <Link to="/event/1">Link to Event 1</Link>
+          <Link to="/event/2">Link to Event 2</Link>
+          <Link to="/event/3">Link to Event 3</Link>
+          <Link to="/event/4">Link to Event 4</Link>
+          <Link to="/event/5">Link to Event 5</Link>
+          <Link to="/event/6">Link to Event 6</Link>
+          <Route
+            exact
+            path="/"
+            render={() => <EventList data={this.state.data} />}
+          />
+          <Route
+            path="/event/:id"
+            render={(props) => <Event {...props} data={this.state.data} />}
+          />
         </div>
       </div>
     );
