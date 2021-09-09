@@ -8,7 +8,6 @@ class Event extends Component {
 
   render() {
     const id = this.props.match.params.id;
-
     const eventOnId = this.props.data[id];
     return (
       <div className="event">
@@ -24,7 +23,8 @@ class Event extends Component {
         </div>
         <div>
           <p>Location: {eventOnId._embedded.venues[0].name}</p>
-          {eventOnId._embedded.venues[0].address.line1}<br/>
+          {eventOnId._embedded.venues[0].address.line1}
+          <br />
           {eventOnId._embedded.venues[0].city.name},{" "}
           {eventOnId._embedded.venues[0].state.stateCode}{" "}
           {eventOnId._embedded.venues[0].postalCode}
@@ -34,7 +34,8 @@ class Event extends Component {
             Price Range: ${eventOnId.priceRanges[0].min} to $
             {eventOnId.priceRanges[0].max}
           </p>
-          <p>Ticket Purchase Limit: {eventOnId.accessibility.ticketLimit}</p><br/>
+          <p>Ticket Purchase Limit: {eventOnId.accessibility.ticketLimit}</p>
+          <br />
         </div>
         <div>
           <h3>Important Event Health/Safety Information</h3>
@@ -43,7 +44,7 @@ class Event extends Component {
         </div>
         <div>
           <form action={eventOnId.url} method="get" target="_blank">
-            <button type="submit">Find Tickets</button>
+            <button className="findTickets" type="submit">Find Tickets</button>
           </form>
         </div>
       </div>

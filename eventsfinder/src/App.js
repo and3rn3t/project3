@@ -1,25 +1,30 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import axios from "axios";
-import Header from "./Components/Header/header";
 
-import EventList from "./Components/EventList/EventList";
-import Event from "./Components/Event/Event";
 import "./App.css";
 
-const rootUrl = "https://app.ticketmaster.com/discovery/v2/events.json";
+import Header from "./Components/Header/Header";
+import EventList from "./Components/EventList/EventList";
+import Event from "./Components/Event/Event";
 
-const apiKey = "&apikey=Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
-const postalCode = "?postalCode=61265";
-const keyword = "&keyword=";
-const radius = "&radius=50&unit=miles";
-const apiUrl = rootUrl + postalCode + radius + keyword + apiKey;
+const something = "Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
+const postalCode = "60601";
+let city = "";
+let keyword = "";
+let radius = 50;
+
+const apiUrl = `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${postalCode}&radius=${radius}&city=${city}&keyword=${keyword}&apikey=${something}`;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: {},
+      postalCode: null,
+      city: null,
+      keyword: null,
+      radius: null
     };
   }
 
