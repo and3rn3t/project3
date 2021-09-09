@@ -4,7 +4,7 @@ import axios from "axios";
 
 import "./App.css";
 
-import Header from "./Components/Header/Header";
+import Header from "./Components/Header/header";
 import EventList from "./Components/EventList/EventList";
 import Event from "./Components/Event/Event";
 
@@ -20,7 +20,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {},
+      data: [],
       postalCode: null,
       city: null,
       keyword: null,
