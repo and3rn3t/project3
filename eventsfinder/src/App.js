@@ -20,21 +20,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
       data: {},
       postalCode: null,
       city: null,
       keyword: null,
       radius: null
-<<<<<<< HEAD
-=======
-      data: [],
->>>>>>> main
-=======
->>>>>>> main
     };
   }
 
