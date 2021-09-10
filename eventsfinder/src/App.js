@@ -8,14 +8,14 @@ import Header from "./Components/Header/header";
 import EventList from "./Components/EventList/EventList";
 import Event from "./Components/Event/Event";
 
-// const something = "Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
+const something = "Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [],
-      postalCode: null,
+      postalCode: "",
       city: "",
       keyword: "",
     };
@@ -23,7 +23,6 @@ class App extends Component {
 
   // Takes changes made in Postal Code input field and sets state / runs axios API to generate results based on postal code
   onPstlChangeHandler = async (e) => {
-    // console.log(e.target.value);
     if (e.target.value.length === 5) {
       this.searchPstl(e.target.value);
       this.setState({ postalCode: e.target.value });
@@ -31,9 +30,8 @@ class App extends Component {
   };
 
   searchPstl = async (postalCode) => {
-    // console.log(postalCode);
     let results = await axios.get(
-      `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${postalCode}&apikey=Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L`
+      `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${postalCode}&apikey=${something}`
     );
 
     let events = <h1>No Events Found</h1>;
@@ -70,19 +68,6 @@ class App extends Component {
   //   this.setState({ data: results.data._embedded.events });
   // };
 
-  // async componentDidMount() {
-  //   await this.fetchEventInfo();
-  // }
-
-  // Shows events if there are any, error if not
-  // get renderEvents() {
-  //   let events = <h1>No Events Found</h1>;
-  //   if (this.state.data) {
-  //     events = <EventList data={this.state.data} />;
-  //   }
-  //   return events;
-  // }
-
   render() {
     return (
       <div>
@@ -108,7 +93,7 @@ class App extends Component {
               onChange={(e) => this.onKeywordChangeHandler(e)}
               placeholder="Enter a keyword"
             /> */}
-            <button onClick="">Reset</button>
+              {/* <button>Reset</button> */}
             </form>
             {this.renderEvents}
           </div>
