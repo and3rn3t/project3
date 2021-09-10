@@ -15,7 +15,7 @@ margin-right:10px;
 }
 
 .gradient{
-    position: absolute;
+    /* position: absolute; */
     background: linear-gradient(45deg,white, red, green,);
     top: 0;
     left: 0;
