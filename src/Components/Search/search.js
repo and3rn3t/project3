@@ -33,7 +33,7 @@ class Search extends Component {
       `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=${postalCode}&apikey=${something}`
     );
 
-    let events = <h1>No Events Found</h1>;
+    let events;
     if (results.data._embedded.events) {
       events = <EventList data={this.state.data} />;
       this.setState({ data: results.data._embedded.events });
