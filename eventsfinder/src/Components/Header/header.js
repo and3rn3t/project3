@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {useHistory}from 'react-router-dom'
 
 import './header.css';
 
@@ -12,6 +13,10 @@ export default class Header extends Component {
          
           <span class ='gradient'></span>
               <span class='spotlight'></span>
+
+
+
+
         </div>
       )
     }

@@ -23,7 +23,7 @@ margin-right:10px;
     bottom: 0;
     mix-blend-mode: multiply;
 }
-.spotlight {
+/* .spotlight {
     position: absolute;
     top: -100%;
     left: -100%;
@@ -48,4 +48,4 @@ margin-right:10px;
     to {
         transform: translate(50%, 50%);
     }
-}
+} */
