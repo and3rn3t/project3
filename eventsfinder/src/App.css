@@ -1,19 +1,12 @@
-.background{
-  
-  
+.background {
   height: 1000px;
   background-image: url("../src/Images/concert.jpeg");
 
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 50px;
-
-
-  
-
 }
 
 form {
   position: absolute;
-
 }
