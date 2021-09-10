@@ -15,7 +15,6 @@ class Event extends Component {
           <h1>{eventOnId.name}</h1>
         </div>
         <div>
-          {/* <h2>Event Information</h2> */}
           <p>
             Event Date/Time: {eventOnId.dates.start.localDate}{" "}
             {eventOnId.dates.start.localTime}
@@ -47,10 +46,7 @@ class Event extends Component {
             <button className="findTickets" type="submit">
               Find Tickets
             </button>
-
-            <button className="btn" onClick={"/"}>
-              Back to Search{" "}
-            </button>
+            <button>Back to Search</button>
           </form>
         </div>
       </div>
