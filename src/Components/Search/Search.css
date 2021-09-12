@@ -1,16 +1,14 @@
-.search{
-    margin-left: 200px;
-
-}
-input{
-    width: 350px;
-    height: 80px;
-    font-size: 25px;
-color: black;
-font-weight: 700;
-border-radius: 100px;
-text-align: center;
-background-color: khaki;
+.search {
+  margin-left: 100px;
 }
 
-    
+input {
+  width: 350px;
+  height: 80px;
+  font-size: 25px;
+  color: black;
+  font-weight: 700;
+  border-radius: 100px;
+  text-align: center;
+  background-color: khaki;
+}

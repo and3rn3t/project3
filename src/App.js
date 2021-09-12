@@ -16,7 +16,6 @@ class App extends Component {
       <div>
         <Header />
         <Search />
-        <div className="background"></div>
       </div>
     );
   }
