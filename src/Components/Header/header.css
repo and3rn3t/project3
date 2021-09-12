@@ -1,51 +1,55 @@
 .header{
-background-color: rgb(204, 71, 18);
-font-family:cursive;
-font-size: 35px;
-text-align:center;
-vertical-align: middle;
-color:black;
-height: 200px;
-border-radius: 50px;
-border-color: black;
-border-style:solid;
-margin-left: 10px;
-margin-right:10px;
-
-}
-
-.gradient{
-    /* position: absolute; */
-    background: linear-gradient(45deg,white, red, green,);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    mix-blend-mode: multiply;
-}
-.spotlight {
-    position: absolute;
-    top: -100%;
-    left: -100%;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(
-            circle,
-            white,
-            transparent 25%
-        ) center / 25% 25%,
-        radial-gradient(
-            circle,
-            white,
-            black 25%
-        ) center / 12.5% 12.5%;
-    animation: light 5s linear infinite;
-    mix-blend-mode: color-dodge;
-}
-
-@keyframes light {
-    to {
-        transform: translate(50%, 50%);
+    background-color: rgb(204, 71, 18);
+    font-family:cursive;
+    font-size: 35px;
+    text-align:center;
+    vertical-align: middle;
+    color:black;
+    height: 200px;
+    border-radius: 50px;
+    border-color: black;
+    border-style:solid;
+    margin-left: 10px;
+    margin-right:10px;
+    
     }
-}
+    .background{
+        background-color: indianred;
+    }
+    
+    .gradient{
+        /* position: absolute; */
+        background: linear-gradient(45deg,white, red, green,);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        mix-blend-mode: multiply;
+    }
+    /* .spotlight {
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(
+                circle,
+                white,
+                transparent 25%
+            ) center / 25% 25%,
+            radial-gradient(
+                circle,
+                white,
+                black 25%
+            ) center / 12.5% 12.5%;
+        animation: light 5s linear infinite;
+        mix-blend-mode: color-dodge;
+    } */
+    
+    @keyframes light {
+        to {
+            transform: translate(50%, 50%);
+        }
+    }
+    

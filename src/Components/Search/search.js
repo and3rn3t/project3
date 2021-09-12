@@ -44,14 +44,16 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <div className="background">
+        <div className="search">
           <div>
             <form>
+              
               <input
                 type="text"
                 value={this.state.postalCode}
                 onChange={(e) => this.onPstlChangeHandler(e)}
                 placeholder="Enter a ZIP/Postal Code"
+                
               />
             </form>
           </div>

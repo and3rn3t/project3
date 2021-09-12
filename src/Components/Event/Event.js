@@ -33,7 +33,7 @@ class Event extends Component {
             Price Range: ${eventOnId.priceRanges[0].min} to $
             {eventOnId.priceRanges[0].max}
           </p>
-          <p>Ticket Purchase Limit: {eventOnId.accessibility.ticketLimit}</p>
+          {/* <p>Ticket Purchase Limit: {eventOnId.accessibility.ticketLimit}</p> */}
           <br />
         </div>
         <div>
@@ -46,7 +46,9 @@ class Event extends Component {
             <button className="findTickets" type="submit">
               Find Tickets
             </button>
-            <button>Back to Search</button>
+            <button className="Back to Search" type="submit">
+            Back to Search
+            </button>
           </form>
         </div>
       </div>
