@@ -1,4 +1,4 @@
-import React, { Component,Switch } from "react";
+import React, { Component } from "react";
 import "./Event.css";
 
 class Event extends Component {
@@ -15,8 +15,6 @@ class Event extends Component {
           <h1>{eventOnId.name}</h1>
         </div>
         <div>
-        
-          {/* <h2>Event Information</h2> */}
           <p>
             Event Date/Time: {eventOnId.dates.start.localDate}{" "}
             {eventOnId.dates.start.localTime}
@@ -45,9 +43,10 @@ class Event extends Component {
         </div>
         <div>
           <form action={eventOnId.url} method="get" target="_blank">
-            <button className="findTickets" type="submit">Find Tickets</button>
-
-            <button className='btn' onClick={'/'}>Back to Search </button>
+            <button className="findTickets" type="submit">
+              Find Tickets
+            </button>
+            <button>Back to Search</button>
           </form>
         </div>
       </div>
