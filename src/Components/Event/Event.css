@@ -1,7 +1,6 @@
-.background{
-    background-color: hotpink; 
-     background-image: url("/src/Images/concert.jpeg");
-
+.background {
+  background-color: hotpink;
+  background-image: url("/src/Images/concert.jpeg");
 }
 /* .spotlight {
     position: absolute;
@@ -23,16 +22,17 @@
     animation: light 5s linear infinite;
     mix-blend-mode: color-dodge;
 } */
-.h1{
-    font-size: 80px;
-}
-button{
-    font-size: 35px;
-    background-color: palevioletred;
-    border-radius: 10px;
+
+.h1 {
+  font-size: 80px;
 }
 
-    
+button {
+  font-size: medium;
+  background-color: palevioletred;
+  border-radius: 10px;
+}
 
-  
-
+.event {
+  font-size: large;
+}

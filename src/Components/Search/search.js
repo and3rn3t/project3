@@ -9,6 +9,10 @@ import Event from "../Event/Event";
 
 const something = "Fbt32TPxBuKL7RiAXrlZacb7PK45Xg6L";
 
+let refreshPage = () => {
+  window.location.reload();
+};
+
 class Search extends Component {
   constructor(props) {
     super(props);
@@ -43,18 +47,17 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <div className="search">
+      <div className="search">
+        <div>
           <div>
             <form>
-              
               <input
                 type="text"
                 value={this.state.postalCode}
                 onChange={(e) => this.onPstlChangeHandler(e)}
                 placeholder="Enter a ZIP/Postal Code"
-                
               />
+              <button onClick={refreshPage}>Clear</button>
             </form>
           </div>
           <Route
