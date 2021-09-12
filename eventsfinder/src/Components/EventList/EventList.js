@@ -24,7 +24,18 @@ class EventList extends Component {
           </Link>
           {<img src={value.images[0].url} alt='' />}
 
+      
+
+
           
+         
+          {value.dates.start.dateTime + '   - '}    
+           {value.name+ '   @ '}
+           {value._embedded.venues[0].name}
+          
+         { 
+ }
+
         </div>
         )
       }
