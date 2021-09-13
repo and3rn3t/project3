@@ -46,6 +46,7 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
+         <p> Are you looking for something to do tonight?  Enter a zip code below to start planning your night!!</p>
         <form>
           <input
             type="text"

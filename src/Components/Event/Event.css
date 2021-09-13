@@ -1,8 +1,10 @@
 .background {
   
   background-image: url("/src/Images/concert.jpeg");
+  z-index:-1;
 }
- /* .spotlight {
+  .spotlight {
+   z-index:-2;
     position: absolute;
     top: -100%;
     left: -100%;
@@ -17,21 +19,34 @@
         radial-gradient(
             circle,
             white,
+            /* black 25% */
             transparent 25%
         ) center / 12.5% 12.5%;
     animation: light 5s linear infinite;
     mix-blend-mode: color-dodge;
-}  */
+}  
+@keyframes light{
+  to{
+    transform: translate(50%,50%);
+  }
+}
 
 .h1 {
   font-size: 80px;
 }
 
 button {
+  
   font-size: medium;
   background-color: palevioletred;
   border-radius: 10px;
-  height: 40px;
+  /* height: 40px; */
+  width:100px;
+  height: 50px;
+  text-align:center;
+  border:5px solid black;
+  border-color: black;
+  
   
 }
 
