@@ -6,8 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 40px;
-  
-  background-color:paleturquoise;
+
+  background-color:paleturquoise; 
+  background-image: url("/src/Images/concert.jpeg");
 }
 
 code {

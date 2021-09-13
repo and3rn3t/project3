@@ -50,6 +50,7 @@ class Search extends Component {
       <div className="search">
         <div>
           <div>
+            <p> Are you looking for something to do tonight?  Enter a zip code below to start planning your night!!</p>
             <form>
               <input
                 type="text"
@@ -57,7 +58,10 @@ class Search extends Component {
                 onChange={(e) => this.onPstlChangeHandler(e)}
                 placeholder="Enter a ZIP/Postal Code"
               />
-              <button onClick={refreshPage}>Clear</button>
+              
+              <button class="button1" onClick={refreshPage}>Clear</button>
+              
+              
             </form>
           </div>
           <Route
