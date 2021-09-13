@@ -1,8 +1,8 @@
 .background {
-  background-color: hotpink;
+  
   background-image: url("/src/Images/concert.jpeg");
 }
-/* .spotlight {
+ /* .spotlight {
     position: absolute;
     top: -100%;
     left: -100%;
@@ -21,7 +21,7 @@
         ) center / 12.5% 12.5%;
     animation: light 5s linear infinite;
     mix-blend-mode: color-dodge;
-} */
+}  */
 
 .h1 {
   font-size: 80px;
@@ -31,8 +31,14 @@ button {
   font-size: medium;
   background-color: palevioletred;
   border-radius: 10px;
+  height: 40px;
+  
 }
 
 .event {
   font-size: large;
+  color:black;
+  background-color: rgb(209, 191, 162);
+  padding-left:100px;
+  
 }
