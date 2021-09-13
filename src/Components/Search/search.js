@@ -46,23 +46,12 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <div>
-          <div>
-            <p> Are you looking for something to do tonight?  Enter a zip code below to start planning your night!!</p>
-            <form>
-              <input
-                type="text"
-                value={this.state.postalCode}
-                onChange={(e) => this.onPstlChangeHandler(e)}
-                placeholder="Enter a ZIP/Postal Code"
-              />
-              <button class="button1" onClick={refreshPage}>Clear</button>
-            </form>
-          </div>
-          <Route
-            exact
-            path="/"
-            render={() => <EventList data={this.state.data} />}
+        <form>
+          <input
+            type="text"
+            value={this.state.postalCode}
+            onChange={(e) => this.onPstlChangeHandler(e)}
+            placeholder="Enter ZIP Code"
           />
           <button onClick={refreshPage}>Clear</button>
         </form>
