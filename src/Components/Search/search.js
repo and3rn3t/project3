@@ -19,8 +19,6 @@ class Search extends Component {
     this.state = {
       data: [],
       postalCode: undefined,
-      city: undefined,
-      keyword: undefined,
     };
   }
 
@@ -58,10 +56,7 @@ class Search extends Component {
                 onChange={(e) => this.onPstlChangeHandler(e)}
                 placeholder="Enter a ZIP/Postal Code"
               />
-              
               <button class="button1" onClick={refreshPage}>Clear</button>
-              
-              
             </form>
           </div>
           <Route
@@ -69,11 +64,17 @@ class Search extends Component {
             path="/"
             render={() => <EventList data={this.state.data} />}
           />
-          <Route
-            path="/event/:id"
-            render={(props) => <Event {...props} data={this.state.data} />}
-          />
-        </div>
+          <button onClick={refreshPage}>Clear</button>
+        </form>
+        <Route
+          exact
+          path="/"
+          render={() => <EventList data={this.state.data} />}
+        />
+        <Route
+          path="/event/:id"
+          render={(props) => <Event {...props} data={this.state.data} />}
+        />
       </div>
     );
   }

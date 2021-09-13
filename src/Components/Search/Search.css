@@ -3,12 +3,11 @@
 }
 
 input {
-  width: 250px;
-  height: 80px;
-  font-size: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: medium;
   color: black;
-  font-weight: 700;
-  border-radius: 100px;
+  border-radius: 20px;
   text-align: center;
   background-color: rgb(240, 213, 140);
   margin-left: 450px;
