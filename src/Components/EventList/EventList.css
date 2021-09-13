@@ -1,8 +1,22 @@
 img {
     height: 200px;
     width: 200px;
+    margin-left: 35px;
 }
 
 .eventItem {
-    font-size: large;
+    font-size:large;
+    
+    
 }
+
+.eventItem{
+    background-color:rgb(231, 193, 147);
+    padding-left: 100px;
+    padding-top: 10px;
+   
+   
+       
+}
+
+
